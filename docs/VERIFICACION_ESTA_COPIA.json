@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-27",
+  "version": "2.0.0",
+  "status": "VERIFIED_LOCALLY_NOT_PUBLISHED",
+  "python": "3.14.7",
+  "standard_library_only": true,
+  "tests_passed": 175,
+  "tests_log": "TESTS_ESTA_COPIA.txt",
+  "tests_log_sha256": "14a77641a62948ca2596f3080bca086b37b61556a575a511d29473f1f0954e30",
+  "examples": [
+    {
+      "case": "calculo",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "datos",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "datos_sin_mejora",
+      "state": "CLOSED_UNRESOLVED",
+      "verified": true
+    },
+    {
+      "case": "documentos",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "techo",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "revision_declarada",
+      "state": "CLOSED_REVIEWED_DECLARED",
+      "verified": true
+    }
+  ],
+  "tested_source_files_identical_to_2_0": 31,
+  "code_changes": false,
+  "base_distribution_changes": [
+    "README.md: entry link added"
+  ],
+  "scope": "Re-execution of existing software tests and examples in this delivery copy; not new scientific efficacy evidence",
+  "source_manifest": "MANIFEST_ORIGEN_2_0.json",
+  "source_manifest_sha256": "c48b672a5e9e9eb3ab559056449ba2bd8628109a1b5d1ce1ee852e22773fcee9",
+  "excluded": [
+    "Git internal metadata",
+    "generated test cases",
+    "Python environment",
+    "private correspondence",
+    "third-party PDFs",
+    "historical datasets"
+  ],
+  "publication_performed": false,
+  "third_party_message_sent": false
+}

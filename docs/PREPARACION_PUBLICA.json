@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-26",
+  "version": "2.0.0",
+  "status": "PREPARED_LOCALLY_NOT_PUBLISHED",
+  "distribution": "text-only Python, Markdown, JSON, CSV and Git configuration",
+  "license": "MIT",
+  "copyright_notice": "Copyright (c) 2026 Alberto",
+  "tested_files_identical": 31,
+  "local_markdown_targets_checked": 34,
+  "runtime_imports_observed": [
+    "__future__",
+    "argparse",
+    "ast",
+    "contextlib",
+    "copy",
+    "csv",
+    "decimal",
+    "fractions",
+    "hashlib",
+    "html",
+    "io",
+    "json",
+    "math",
+    "os",
+    "pathlib",
+    "re",
+    "shutil",
+    "stat",
+    "sys",
+    "tempfile",
+    "time",
+    "unicodedata"
+  ],
+  "static_import_review_scope": "No runtime imports of common network/process modules; limited static inspection, not security certification.",
+  "post_acceptance_documentation": [
+    "docs/QA_RESULT.md",
+    "docs/TEST_RESULTS.txt",
+    "docs/VALIDACION_ENTREGA.json",
+    "docs/PREPARACION_PUBLICA.json",
+    "MANIFEST_SHA256.json"
+  ],
+  "excluded": [
+    "_build and generated cases",
+    "local companion PDF and its layout generator",
+    "private correspondence",
+    "Python environment",
+    "Git internal metadata"
+  ],
+  "original_public_copy_unchanged": true,
+  "prior_trial_preserved": true
+}

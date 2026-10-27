@@ -1,0 +1,14 @@
+{
+  "reviewer": "Revisor ficticio del ejemplo de desarrollo",
+  "method": "Lectura del alcance declarado en los párrafos 1 y 2.",
+  "verdict": "pass",
+  "finding": "La nota limita su evidencia a datos sintéticos y no atribuye resultados a personas.",
+  "limitations": [
+    "Revisión preparada para demostrar el contrato; no revisión externa.",
+    "La identidad y competencia del revisor son declaraciones."
+  ],
+  "evidence_paths": [
+    "nota.txt"
+  ]
+}
+

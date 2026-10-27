@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "case_id": "calculo",
+  "objective": "Comprobar el valor de 2 + 3 × 4 y distinguirlo de calcular todas las operaciones de izquierda a derecha.",
+  "scope": "Ejemplo de desarrollo local con fuentes pequeñas conocidas; no evaluación científica independiente.",
+  "success_criteria": "Completar controles fijados, conservar resultados adversos y limitar la conclusión al ejemplo.",
+  "limitations": [
+    "Datos y criterios conocidos al preparar el ejemplo.",
+    "El software no verifica automáticamente la pertinencia semántica de las hipótesis."
+  ],
+  "budget": {
+    "max_checks": 8,
+    "max_units": 12,
+    "max_rounds": 2,
+    "max_seconds": 1800
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué resultado permiten sostener las comprobaciones del ejemplo?",
+      "purpose": "Responder a la necesidad concreta con datos de desarrollo."
+    },
+    {
+      "id": "q2",
+      "text": "¿Qué alternativa o extrapolación podría producir una conclusión errónea?",
+      "purpose": "Controlar el límite decisivo antes de cerrar."
+    }
+  ],
+  "branches": [
+    {
+      "id": "base",
+      "question_id": "q1",
+      "role": "baseline",
+      "hypothesis": "La precedencia convencional produce 14.",
+      "approach": "Aplicar la precedencia de operaciones.",
+      "falsifier": "Una evaluación exacta produce un valor distinto de 14."
+    },
+    {
+      "id": "alternativa",
+      "question_id": "q1",
+      "role": "alternative",
+      "hypothesis": "El resultado 20 de operar de izquierda a derecha coincide con la expresión original.",
+      "approach": "Calcular la diferencia respecto a 20.",
+      "falsifier": "La diferencia exacta no es cero."
+    },
+    {
+      "id": "critica",
+      "question_id": "q2",
+      "role": "critical",
+      "hypothesis": "Un resultado con error que cruza la región de aceptación no permite discriminar.",
+      "approach": "Comprobar un intervalo de medición y conservar abstención.",
+      "falsifier": "El intervalo de error queda íntegro en una única región."
+    }
+  ],
+  "checks": [
+    {
+      "id": "valor",
+      "branch_ids": [
+        "base"
+      ],
+      "method": "arithmetic",
+      "params": {
+        "expression": "2 + 3 * 4",
+        "expected": "14",
+        "tolerance": "0"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    },
+    {
+      "id": "contraejemplo",
+      "branch_ids": [
+        "alternativa"
+      ],
+      "method": "arithmetic",
+      "params": {
+        "expression": "2 + 3 * 4 - 20",
+        "expected": "-6",
+        "tolerance": "0"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": true,
+      "cost_units": 1
+    },
+    {
+      "id": "abstencion",
+      "branch_ids": [
+        "critica"
+      ],
+      "method": "numeric_interval",
+      "params": {
+        "value": "5",
+        "error": "1.1",
+        "regions": [
+          {
+            "id": "H1",
+            "lower": "4",
+            "upper": "6"
+          },
+          {
+            "id": "H2",
+            "lower": "8",
+            "upper": "10"
+          }
+        ],
+        "expected": null
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    }
+  ]
+}

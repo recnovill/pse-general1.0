@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "case_id": "datos",
+  "objective": "Comprobar si un candidato reduce el MAE de una referencia en las mismas cuatro filas conocidas.",
+  "scope": "Ejemplo de desarrollo local con fuentes pequeñas conocidas; no evaluación científica independiente.",
+  "success_criteria": "Completar controles fijados, conservar resultados adversos y limitar la conclusión al ejemplo.",
+  "limitations": [
+    "Datos y criterios conocidos al preparar el ejemplo.",
+    "El software no verifica automáticamente la pertinencia semántica de las hipótesis."
+  ],
+  "budget": {
+    "max_checks": 8,
+    "max_units": 12,
+    "max_rounds": 2,
+    "max_seconds": 1800
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué resultado permiten sostener las comprobaciones del ejemplo?",
+      "purpose": "Responder a la necesidad concreta con datos de desarrollo."
+    },
+    {
+      "id": "q2",
+      "text": "¿Qué alternativa o extrapolación podría producir una conclusión errónea?",
+      "purpose": "Controlar el límite decisivo antes de cerrar."
+    }
+  ],
+  "branches": [
+    {
+      "id": "base",
+      "question_id": "q1",
+      "role": "baseline",
+      "hypothesis": "La referencia conserva menor o igual MAE.",
+      "approach": "Comparación pareada de referencia frente candidato.",
+      "falsifier": "El candidato mejora ambos umbrales previos."
+    },
+    {
+      "id": "alternativa",
+      "question_id": "q1",
+      "role": "alternative",
+      "hypothesis": "El candidato reduce el MAE al menos 0.25 absoluto y 10% relativo.",
+      "approach": "Calcular ambas mejoras con la misma cohorte.",
+      "falsifier": "No se alcanza alguno de los umbrales."
+    },
+    {
+      "id": "critica",
+      "question_id": "q2",
+      "role": "critical",
+      "hypothesis": "La mejora observada coincide con un cálculo manual de las pérdidas de esas cuatro filas.",
+      "approach": "Contraste aritmético exacto separado.",
+      "falsifier": "La diferencia de pérdidas no es 1."
+    }
+  ],
+  "checks": [
+    {
+      "id": "comparacion",
+      "branch_ids": [
+        "base",
+        "alternativa"
+      ],
+      "method": "csv_compare",
+      "params": {
+        "path": "data.csv",
+        "id_column": "id",
+        "truth_column": "truth",
+        "baseline_column": "baseline",
+        "candidate_column": "candidate",
+        "min_absolute_improvement": "0.25",
+        "min_relative_improvement": "0.1",
+        "metric": "mae"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    },
+    {
+      "id": "control_aritmetico",
+      "branch_ids": [
+        "critica"
+      ],
+      "method": "arithmetic",
+      "params": {
+        "expression": "((2 + 2 + 2 + 2) - (1 + 1 + 1 + 1)) / 4",
+        "expected": "1",
+        "tolerance": "0"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": true,
+      "cost_units": 1
+    }
+  ]
+}

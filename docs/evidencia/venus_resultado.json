@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETED",
+  "decision": "NO_DEMONSTRATED_ADVANTAGE",
+  "scores": {
+    "judge_1": {
+      "pse": {
+        "score": 16,
+        "comparator_score": 16,
+        "difference": 0,
+        "major_errors": 0,
+        "grave_errors": 0,
+        "useful_distinction": true,
+        "passes": false
+      },
+      "control": {
+        "score": 16,
+        "comparator_score": 16,
+        "difference": 0,
+        "major_errors": 0,
+        "grave_errors": 0,
+        "useful_distinction": true,
+        "passes": false
+      }
+    },
+    "judge_2": {
+      "pse": {
+        "score": 18,
+        "comparator_score": 18,
+        "difference": 0,
+        "major_errors": 0,
+        "grave_errors": 0,
+        "useful_distinction": true,
+        "passes": false
+      },
+      "control": {
+        "score": 18,
+        "comparator_score": 18,
+        "difference": 0,
+        "major_errors": 0,
+        "grave_errors": 0,
+        "useful_distinction": true,
+        "passes": false
+      }
+    }
+  },
+  "judge_report_hashes": {
+    "judge_1": "ade9cd3fe7f38c33bc18ba2a84c87efdfc79c9e1c15e6809d37bd6a639c082d1",
+    "judge_2": "618759a790ec257d9af85fff3b5014c0ba5fa6f5ad21777937b15637f3752813"
+  },
+  "possible_ceiling": true,
+  "rule": "At least3points in both judges, no grave error, no excess major errors, useful distinction required",
+  "scope": "One paired internally judged synthesis of a curated historical dossier; not external expert or scientific discovery validation",
+  "closed_utc": "2026-10-26T23:56:03.815352+00:00"
+}

@@ -1,0 +1,17 @@
+Usa PSE General 2.0 con el objetivo que describo a continuación.
+
+Lee README.md, PROTOCOLO.md, docs/ALCANCE.md y el contrato técnico. Conserva mis restricciones. Revisa primero si la pregunta y la prueba elegidas son las más útiles dentro de este alcance.
+
+Desarrolla una referencia competente, una alternativa realmente distinta y una rama crítica. Si puedes trabajar en contextos separados, hazlo; no afirmes independencia estadística por esa separación. Busca el supuesto frágil y una objeción que pueda cambiar el resultado.
+
+Fija antes los criterios, fuentes, métodos, unidades, presupuesto y regla de parada. Comprueba la alcanzabilidad del umbral cuando sea posible. Conserva resultados adversos y no cambies el criterio después de verlos.
+
+Si tienes acceso a ejecución, prepara un plan version 2 en una carpeta nueva y utiliza el CLI. No edites expedientes sellados. Si no puedes ejecutar, etiqueta lo entregado como propuesta no ejecutada.
+
+Para observaciones basta el cierre results_only: no lo presentes como respaldo de una conclusión. Para una interpretación usa propose, entrega review-packet a un revisor que examine el texto exacto y registre todos los controles referenciados, el contraste crítico y las limitaciones. No recomiendes el veredicto al revisor. Nunca copies la revisión sintética de los ejemplos para aprobar un caso real.
+
+El revisor y su juicio son declarados, sin autenticación. Si realizas una autorrevisión, indícalo claramente; no la presentes como evaluación externa. Tres propuestas y tres revisiones son el máximo global, dentro del presupuesto compartido.
+
+Si faltan pruebas o recursos, cierra unresolved. Verifica el expediente y entrega: resultado concreto, evidencia, alternativas descartadas con motivo, límites y razón para detenerse. Separa lo calculado, lo documental y lo interpretado. No prometas perfección, descubrimiento ni verdad universal.
+
+Mi objetivo:

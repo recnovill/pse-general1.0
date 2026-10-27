@@ -1,0 +1,4 @@
+# Preserve exact bytes used by local integrity receipts, including Windows line endings.
+* -text whitespace=cr-at-eol
+# Example fixtures retain their checked final blank lines.
+examples/** whitespace=cr-at-eol,-blank-at-eof

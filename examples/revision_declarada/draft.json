@@ -1,0 +1,29 @@
+{
+  "author": "Autor sintético del ejemplo",
+  "selected_branch_id": "base",
+  "claims": [
+    {
+      "id": "c14",
+      "text": "En la expresión de entrada 2 + 3 * 4, el adaptador aritmético obtiene exactamente 14, no 20.",
+      "check_ids": [
+        "valor",
+        "contraejemplo"
+      ],
+      "scope": "Esta expresión y los operadores admitidos por el adaptador.",
+      "assumptions": [
+        "Se pretende aplicar la precedencia convencional de estos operadores."
+      ],
+      "limitations": [
+        "No prueba ninguna afirmación sobre fenómenos físicos o documentales."
+      ]
+    }
+  ],
+  "reasons_by_branch": {
+    "base": "valor devuelve 14.",
+    "alternativa": "contraejemplo obtiene una diferencia de -6 frente a 20.",
+    "critica": "El control de intervalo conserva la abstención prevista; no afecta al cálculo exacto."
+  },
+  "limitations": [
+    "Caso conocido durante desarrollo; revisión sintética que solo demuestra la mecánica del contrato."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "proposal_id": "COMPLETAR_DESDE_PROPUESTA",
+  "proposal_sha256": "COMPLETAR_DESDE_PROPUESTA",
+  "reviewer": "Revisor sintético del ejemplo",
+  "verdict": "approve",
+  "claims": [
+    {
+      "claim_id": "c14",
+      "verdict": "supported",
+      "reason": "El resultado exacto es 14 y la diferencia frente a 20 es -6; el texto se limita a esta expresión.",
+      "check_ids": [
+        "valor",
+        "contraejemplo"
+      ]
+    }
+  ],
+  "challenge": {
+    "check_id": "contraejemplo",
+    "finding": "La alternativa 20 no coincide: diferencia exacta -6.",
+    "alternative_explanation": "Cambiar los paréntesis cambia la expresión; este caso no autoriza esa sustitución."
+  },
+  "scope_assessment": "El juicio se limita a la expresión local y no extrapola a investigaciones reales.",
+  "uncertainties": [
+    "La identidad y la independencia del revisor no se autentican; este revisor es ficticio y didáctico."
+  ]
+}

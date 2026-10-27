@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-26",
+  "status": "PREPARED_LOCALLY_NOT_PUBLISHED",
+  "runtime_version": "1.0",
+  "distribution": "text-only source and documentation",
+  "original_delivery_unchanged": true,
+  "tested_files_identical": 21,
+  "original_test_log_identical": true,
+  "local_markdown_links_checked": 22,
+  "repeated_runtime_tests": false,
+  "reason": "Runtime, tests and example bytes unchanged from the accepted execution; only distribution and documentation adapted",
+  "license": "MIT",
+  "copyright_notice": "Copyright (c) 2026 Alberto",
+  "license_authorization": "Explicit owner choice on 2026-10-26; publication remains deferred",
+  "excluded": [
+    "private correspondence draft",
+    "original binary PDF and its layout-only generator",
+    "build receipts with local paths",
+    "generated cases",
+    "Python environment"
+  ],
+  "scope": "Static publication preparation and byte checks; not antivirus or scientific efficacy certification"
+}

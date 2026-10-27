@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "date": "2026-10-26",
+  "accepted": true,
+  "scope": "Technical software and known development examples only",
+  "python": "3.12.14",
+  "platform": "Windows, same host",
+  "tests": {
+    "count": 87,
+    "total": 87,
+    "adapters": 34,
+    "engine": 29,
+    "independent_adversarial": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "command": "python -B -m unittest discover -s tests -v"
+  },
+  "examples": {
+    "count": 4,
+    "results": [
+      {
+        "case": "calculo",
+        "state": "CLOSED_SUPPORTED",
+        "evidence_mode": "COMPUTED"
+      },
+      {
+        "case": "datos",
+        "state": "CLOSED_SUPPORTED",
+        "evidence_mode": "COMPUTED"
+      },
+      {
+        "case": "datos_sin_mejora",
+        "state": "CLOSED_UNRESOLVED",
+        "evidence_mode": "COMPUTED"
+      },
+      {
+        "case": "documentos",
+        "state": "CLOSED_SUPPORTED",
+        "evidence_mode": "DECLARED_REVIEW"
+      }
+    ]
+  },
+  "portable": {
+    "accepted": true,
+    "command_invocations": 11,
+    "scope": "isolated relocation within new root; same Windows host and Python"
+  },
+  "tested_files_sha256": {
+    "pse/adapters.py": "9e4420e6d6037f84b54a5291dadd1a4f993352be8c0c79c3b18162b1be2026a1",
+    "pse/engine.py": "3be87357f24c96671b158132e2fce20f441bf4475b92a10bf8d3ee4401cf0423",
+    "pse/__init__.py": "0375f4f7183d219a11e13082bfa8844b62610082ed9348b618c556e6cbbf8e0e",
+    "pse/__main__.py": "f90a61b4de6f19e3eaa13df843f413c218a39b52bdca3456b964174b754e8d9e",
+    "tests/test_adapters.py": "a715c773c5edd613f8a3eea82c9f1e45197612a97cc9a3cef7033102d461d860",
+    "tests/test_adversarial.py": "865fcec1d9995bee3d0ccea005a4f69b6303713a779861d62c948c2b17d49fb1",
+    "tests/test_engine.py": "ac4be88f9dac188570bcba4b738780dee1d6336634101582f9baea29bc821bd9",
+    "examples/LEEME.md": "d219faac32d64011870fffc611d98b2b7fd585e14bf5047fe7d32f3af09bb707",
+    "examples/calculo/decision.json": "ac187d89e70fd041f0a767826ad74ad3659bfb228dc44e6f385fe3b117e9e77f",
+    "examples/calculo/plan.json": "778eab23565c982d3b8d755b2dac38463389c533e0c5df9dfffe99e16c98de2d",
+    "examples/datos/data.csv": "5c19e92a12c5b799028318cb9222ee4e2cfdd4159031036532093ebcc88cc29e",
+    "examples/datos/decision.json": "d1c3bfe4649fdf9d5a05f13da69fea9c04c9463ef232ecac2d6e1e175d83c863",
+    "examples/datos/plan.json": "ab1f1d9e9fb8eb82982c0d02272f49cab29ea3fa7e3520cef9995f6967cbd8b6",
+    "examples/datos_sin_mejora/data.csv": "7a30e7aa52acedaadb9bd06b2a0245240ae1dde4bc04b30eef8715a61430ec5e",
+    "examples/datos_sin_mejora/decision.json": "b41c4378a58639675a9ef12379fe32cd6ebf2b3291fe4044ab816498e999f37b",
+    "examples/datos_sin_mejora/plan.json": "9bde33e39d8d1605dd9a601de4239aa77a768d78ae9a49730929fdffef3ee014",
+    "examples/documentos/decision.json": "d2e08e182a5a553fec440855bfcbfc641c6a814dfb51f6e7a7bf50457a8b8646",
+    "examples/documentos/nota.txt": "54376c3e08330026e1b0c55853c72f1f7289216dd8f5a7a93656c9ab5da0598d",
+    "examples/documentos/plan.json": "ba770e553de111344ee2e6136a27e22db702d53f5d39065690ee269e7b2c11fa",
+    "examples/documentos/revision.json": "f54f99b80dc500c55ff0982dd5f2eaae961f6327c51ee6d05b326e494ff7c8d9",
+    "scripts/run_examples.py": "c3d5d475335702c6ac2dbf7d6261df257eac23ae4b43c6eaca524b7238d5a332"
+  },
+  "receipt_sha256": "8b77f60d81d989eaa148fd96f30f03db07f424ed7e83ace0f900f555c8b8b91b",
+  "test_log_sha256": "746a18f400ac98df8cb8829a1247f26ad1856e50b876adf1383ba03c50b17308",
+  "scientific_efficacy": "not_evaluated",
+  "limits": [
+    "known synthetic development examples",
+    "no independent scientific efficacy evaluation",
+    "no empirical universal coverage",
+    "local hashes not external custody",
+    "walltime checked between synchronous adapters; external work not measured"
+  ],
+  "distribution": "GitHub source preparation: text only; unchanged runtime, tests and development examples; documentation adapted for public reading",
+  "publication_status_at_preparation": "local_only"
+}

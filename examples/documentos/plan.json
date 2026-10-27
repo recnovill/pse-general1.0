@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "case_id": "documentos",
+  "objective": "Comprobar qué afirma una nota local sobre su evidencia y evitar atribuirle resultados de una audiencia real.",
+  "scope": "Ejemplo de desarrollo local con fuentes pequeñas conocidas; no evaluación científica independiente.",
+  "success_criteria": "Completar controles fijados, conservar resultados adversos y limitar la conclusión al ejemplo.",
+  "limitations": [
+    "Datos y criterios conocidos al preparar el ejemplo.",
+    "El software no verifica automáticamente la pertinencia semántica de las hipótesis."
+  ],
+  "budget": {
+    "max_checks": 8,
+    "max_units": 12,
+    "max_rounds": 2,
+    "max_seconds": 1800
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué resultado permiten sostener las comprobaciones del ejemplo?",
+      "purpose": "Responder a la necesidad concreta con datos de desarrollo."
+    },
+    {
+      "id": "q2",
+      "text": "¿Qué alternativa o extrapolación podría producir una conclusión errónea?",
+      "purpose": "Controlar el límite decisivo antes de cerrar."
+    }
+  ],
+  "branches": [
+    {
+      "id": "base",
+      "question_id": "q1",
+      "role": "baseline",
+      "hypothesis": "La nota se presenta como demostración sintética.",
+      "approach": "Localizar la cita exacta que identifica el tipo de datos.",
+      "falsifier": "La cita no está en la fuente preservada."
+    },
+    {
+      "id": "alternativa",
+      "question_id": "q1",
+      "role": "alternative",
+      "hypothesis": "La nota permite afirmar una mejora de comprensión en personas.",
+      "approach": "Buscar la declaración de alcance y evaluar si hubo personas.",
+      "falsifier": "La fuente declara que no se evaluaron personas."
+    },
+    {
+      "id": "critica",
+      "question_id": "q2",
+      "role": "critical",
+      "hypothesis": "La cita existe, pero su interpretación requiere una revisión declarada y limitada.",
+      "approach": "Separar coincidencia textual y juicio de un revisor.",
+      "falsifier": "La revisión no identifica método, fuente o limitaciones."
+    }
+  ],
+  "checks": [
+    {
+      "id": "cita_sintetica",
+      "branch_ids": [
+        "base"
+      ],
+      "method": "text_evidence",
+      "params": {
+        "path": "nota.txt",
+        "quote": "El informe es una demostración con datos sintéticos.",
+        "locator": "Párrafo 1"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    },
+    {
+      "id": "limite_personas",
+      "branch_ids": [
+        "alternativa"
+      ],
+      "method": "text_evidence",
+      "params": {
+        "path": "nota.txt",
+        "quote": "No se evaluaron personas ni se midió comprensión.",
+        "locator": "Párrafo 2"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": true,
+      "cost_units": 1
+    },
+    {
+      "id": "revision_declarada",
+      "branch_ids": [
+        "critica"
+      ],
+      "method": "manual_review",
+      "params": {
+        "path": "revision.json",
+        "evidence": [
+          {
+            "path": "nota.txt",
+            "quote": "No se evaluaron personas ni se midió comprensión.",
+            "locator": "Párrafo 2"
+          }
+        ]
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    }
+  ]
+}

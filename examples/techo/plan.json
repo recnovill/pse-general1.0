@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "case_id": "techo",
+  "objective": "Detectar que el mínimo absoluto de 0.5 supera el MAE de referencia de 0.25; conservar el defecto de diseño.",
+  "scope": "Ejemplo de desarrollo local con fuentes pequeñas conocidas; no evaluación científica independiente.",
+  "success_criteria": "Completar controles fijados, conservar resultados adversos y limitar la conclusión al ejemplo.",
+  "limitations": [
+    "Datos y criterios conocidos al preparar el ejemplo.",
+    "El software no verifica automáticamente la pertinencia semántica de las hipótesis."
+  ],
+  "budget": {
+    "max_checks": 8,
+    "max_units": 12,
+    "max_rounds": 2,
+    "max_seconds": 1800
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "text": "¿Qué resultado permiten sostener las comprobaciones del ejemplo?",
+      "purpose": "Responder a la necesidad concreta con datos de desarrollo."
+    },
+    {
+      "id": "q2",
+      "text": "¿Qué alternativa o extrapolación podría producir una conclusión errónea?",
+      "purpose": "Controlar el límite decisivo antes de cerrar."
+    }
+  ],
+  "branches": [
+    {
+      "id": "base",
+      "question_id": "q1",
+      "role": "baseline",
+      "hypothesis": "La referencia tiene MAE de 0.25 en estas cuatro filas conocidas.",
+      "approach": "Comparación pareada de referencia frente candidato.",
+      "falsifier": "El candidato mejora ambos umbrales previos."
+    },
+    {
+      "id": "alternativa",
+      "question_id": "q1",
+      "role": "alternative",
+      "hypothesis": "El candidato debe mejorar al menos 0.5 absoluto y 10% relativo según el criterio fijado.",
+      "approach": "Calcular ambas mejoras con la misma cohorte.",
+      "falsifier": "El umbral absoluto no se alcanza o es imposible dado el error observado de referencia."
+    },
+    {
+      "id": "critica",
+      "question_id": "q2",
+      "role": "critical",
+      "hypothesis": "El máximo de mejora absoluta con errores no negativos es 0.25.",
+      "approach": "Calcular exactamente el error de referencia y compararlo con el mínimo.",
+      "falsifier": "El error medio absoluto calculado difiere de 0.25."
+    }
+  ],
+  "checks": [
+    {
+      "id": "comparacion",
+      "branch_ids": [
+        "base",
+        "alternativa"
+      ],
+      "method": "csv_compare",
+      "params": {
+        "path": "data.csv",
+        "id_column": "id",
+        "truth_column": "truth",
+        "baseline_column": "baseline",
+        "candidate_column": "candidate",
+        "min_absolute_improvement": "0.5",
+        "min_relative_improvement": "0.1",
+        "metric": "mae"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": false,
+      "cost_units": 1
+    },
+    {
+      "id": "control_aritmetico",
+      "branch_ids": [
+        "critica"
+      ],
+      "method": "arithmetic",
+      "params": {
+        "expression": "(0.25 + 0.25 + 0.25 + 0.25) / 4",
+        "expected": "0.25",
+        "tolerance": "0"
+      },
+      "decision_link": "Este control puede cambiar la conclusión concreta del ejemplo.",
+      "critical": true,
+      "challenge": true,
+      "cost_units": 1
+    }
+  ]
+}

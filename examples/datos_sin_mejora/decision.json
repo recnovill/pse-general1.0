@@ -1,0 +1,7 @@
+{
+  "mode": "unresolved",
+  "reason": "El candidato no cumple los umbrales fijados: el MAE pasa de 2 a 3 en estas cuatro filas conocidas.",
+  "limitations": [
+    "Ejemplo sintético de desarrollo; no se cambia la cohorte ni el umbral tras observar el resultado."
+  ]
+}

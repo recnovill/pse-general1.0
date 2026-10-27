@@ -1,0 +1,176 @@
+{
+  "phase": "RESERVED_ONE_SHOT",
+  "freeze_sha256": "377e34341983218eb2eb7782d950ae3e4d7a2ff3a4b0ed8bd6b6458844984ded",
+  "branches": {
+    "control": {
+      "candidate_sha256": "6ccacf3572eab12d06d4316463fc3f092055f40226c02684d62816c5e5529e41",
+      "regimes": {
+        "evaluation_standard": {
+          "status": "SCORED",
+          "trajectories": 4022,
+          "scored_samples_per_trajectory": 700,
+          "candidate": {
+            "input_groups": 4022,
+            "macro_rmse_mm": 1.398316442978759,
+            "median_group_rmse_mm": 1.0727135996218005,
+            "p90_group_rmse_mm": 2.7050334474091158,
+            "worst_group_rmse_mm": 15.054455402150213
+          },
+          "baseline": {
+            "input_groups": 4022,
+            "macro_rmse_mm": 1.4667236852338705,
+            "median_group_rmse_mm": 1.0847846062383906,
+            "p90_group_rmse_mm": 2.996653468336643,
+            "worst_group_rmse_mm": 14.999548781380557
+          },
+          "versus_baseline": {
+            "relative_macro_rmse_reduction": 0.04663948836702947,
+            "absolute_macro_rmse_reduction_mm": 0.06840724225511163,
+            "fraction_groups_lower_rmse": 0.6016907011437096,
+            "material_benefit_ge_10_percent": false,
+            "p90_no_harm_within_10_percent": true,
+            "passes_both_gates": false
+          },
+          "maximum_absolute_error_mm": 42.13612981936389
+        },
+        "evaluation_optimized": {
+          "status": "SCORED",
+          "trajectories": 4822,
+          "scored_samples_per_trajectory": 700,
+          "candidate": {
+            "input_groups": 4640,
+            "macro_rmse_mm": 0.8884900998927873,
+            "median_group_rmse_mm": 0.6983522791650019,
+            "p90_group_rmse_mm": 1.5308595325267706,
+            "worst_group_rmse_mm": 16.875729857980552
+          },
+          "baseline": {
+            "input_groups": 4640,
+            "macro_rmse_mm": 0.7912046038522954,
+            "median_group_rmse_mm": 0.6015131976216448,
+            "p90_group_rmse_mm": 1.3732398263566192,
+            "worst_group_rmse_mm": 16.861692267565726
+          },
+          "versus_baseline": {
+            "relative_macro_rmse_reduction": -0.12295870823655286,
+            "absolute_macro_rmse_reduction_mm": -0.09728549604049186,
+            "fraction_groups_lower_rmse": 0.003017241379310345,
+            "material_benefit_ge_10_percent": false,
+            "p90_no_harm_within_10_percent": false,
+            "passes_both_gates": false
+          },
+          "maximum_absolute_error_mm": 41.60513827235749
+        }
+      },
+      "passes_baseline_in_every_regime": false
+    },
+    "pse": {
+      "candidate_sha256": "96c524b40ac05d86e9bda7182bdc03607b3c9dc47d160b28f2f4cdf9ca78eebb",
+      "regimes": {
+        "evaluation_standard": {
+          "status": "SCORED",
+          "trajectories": 4022,
+          "scored_samples_per_trajectory": 700,
+          "candidate": {
+            "input_groups": 4022,
+            "macro_rmse_mm": 1.3030734738242737,
+            "median_group_rmse_mm": 1.0366025416696454,
+            "p90_group_rmse_mm": 2.4010168857218397,
+            "worst_group_rmse_mm": 15.06172450178005
+          },
+          "baseline": {
+            "input_groups": 4022,
+            "macro_rmse_mm": 1.4667236852338705,
+            "median_group_rmse_mm": 1.0847846062383906,
+            "p90_group_rmse_mm": 2.996653468336643,
+            "worst_group_rmse_mm": 14.999548781380557
+          },
+          "versus_baseline": {
+            "relative_macro_rmse_reduction": 0.11157535196106316,
+            "absolute_macro_rmse_reduction_mm": 0.1636502114095968,
+            "fraction_groups_lower_rmse": 0.7056190949776231,
+            "material_benefit_ge_10_percent": true,
+            "p90_no_harm_within_10_percent": true,
+            "passes_both_gates": true
+          },
+          "maximum_absolute_error_mm": 42.21816301857001
+        },
+        "evaluation_optimized": {
+          "status": "SCORED",
+          "trajectories": 4822,
+          "scored_samples_per_trajectory": 700,
+          "candidate": {
+            "input_groups": 4640,
+            "macro_rmse_mm": 0.6935798639618399,
+            "median_group_rmse_mm": 0.5534149300608,
+            "p90_group_rmse_mm": 1.1105618403028163,
+            "worst_group_rmse_mm": 16.874235536285532
+          },
+          "baseline": {
+            "input_groups": 4640,
+            "macro_rmse_mm": 0.7912046038522954,
+            "median_group_rmse_mm": 0.6015131976216448,
+            "p90_group_rmse_mm": 1.3732398263566192,
+            "worst_group_rmse_mm": 16.861692267565726
+          },
+          "versus_baseline": {
+            "relative_macro_rmse_reduction": 0.12338747703834185,
+            "absolute_macro_rmse_reduction_mm": 0.0976247398904555,
+            "fraction_groups_lower_rmse": 0.997198275862069,
+            "material_benefit_ge_10_percent": true,
+            "p90_no_harm_within_10_percent": true,
+            "passes_both_gates": true
+          },
+          "maximum_absolute_error_mm": 41.676951156866906
+        }
+      },
+      "passes_baseline_in_every_regime": true
+    }
+  },
+  "head_to_head": {
+    "evaluation_standard": {
+      "pse_versus_control": {
+        "relative_macro_rmse_reduction": 0.06811260042940936,
+        "absolute_macro_rmse_reduction_mm": 0.09524296915448516,
+        "fraction_groups_lower_rmse": 0.7076081551466932,
+        "material_benefit_ge_10_percent": false,
+        "p90_no_harm_within_10_percent": true,
+        "passes_both_gates": false
+      },
+      "control_versus_pse": {
+        "relative_macro_rmse_reduction": -0.07309101986011979,
+        "absolute_macro_rmse_reduction_mm": -0.09524296915448516,
+        "fraction_groups_lower_rmse": 0.2923918448533068,
+        "material_benefit_ge_10_percent": false,
+        "p90_no_harm_within_10_percent": false,
+        "passes_both_gates": false
+      }
+    },
+    "evaluation_optimized": {
+      "pse_versus_control": {
+        "relative_macro_rmse_reduction": 0.21937243414920082,
+        "absolute_macro_rmse_reduction_mm": 0.19491023593094736,
+        "fraction_groups_lower_rmse": 0.9961206896551724,
+        "material_benefit_ge_10_percent": true,
+        "p90_no_harm_within_10_percent": true,
+        "passes_both_gates": true
+      },
+      "control_versus_pse": {
+        "relative_macro_rmse_reduction": -0.28102060924547123,
+        "absolute_macro_rmse_reduction_mm": -0.19491023593094736,
+        "fraction_groups_lower_rmse": 0.003879310344827586,
+        "material_benefit_ge_10_percent": false,
+        "p90_no_harm_within_10_percent": false,
+        "passes_both_gates": false
+      }
+    }
+  },
+  "thresholds": {
+    "relative_macro_rmse_reduction_minimum": 0.1,
+    "p90_ratio_maximum": 1.1,
+    "require_every_regime": true
+  },
+  "scope": "One paired AI pilot, historical data, same apparatus, conditional on supplied acceleration; not general superiority or physical validation.",
+  "pse_material_advantage_in_every_regime": false,
+  "control_material_advantage_in_every_regime": false
+}

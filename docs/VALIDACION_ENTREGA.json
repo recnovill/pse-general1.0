@@ -1,0 +1,202 @@
+{
+  "version": "2.0.0",
+  "date": "2026-10-26",
+  "accepted": true,
+  "acceptance_scope": "Synthetic software contract checks; not semantic truth, authenticated reviewers, universal safety or scientific efficacy.",
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "tests_passed": 175,
+  "test_groups": {
+    "adapters": 39,
+    "claims": 34,
+    "engine": 47,
+    "adversarial": 24,
+    "release_v2": 31
+  },
+  "suite_command": "python -B -m unittest discover -s tests -v",
+  "suite_log": "TEST_RESULTS.txt",
+  "suite_log_sha256": "7e9fec7d49fcd5b9ca03c02e1c1f85db6eaac1e4f4d660390bf9e759f2310ed1",
+  "examples": [
+    {
+      "case": "calculo",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "datos",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "datos_sin_mejora",
+      "state": "CLOSED_UNRESOLVED",
+      "verified": true
+    },
+    {
+      "case": "documentos",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "techo",
+      "state": "CLOSED_RESULTS",
+      "verified": true
+    },
+    {
+      "case": "revision_declarada",
+      "state": "CLOSED_REVIEWED_DECLARED",
+      "verified": true
+    }
+  ],
+  "cli_operations": [
+    "init",
+    "branch",
+    "run",
+    "status",
+    "verify",
+    "close",
+    "propose",
+    "review",
+    "review-packet",
+    "tip",
+    "revise",
+    "report"
+  ],
+  "acceptance_receipt_sha256": "e7c300b9a7f2b8226412a272e463a253af95ab1a29b785ea3cb017fac9f12f3b",
+  "executed_copy_and_source_unchanged_during_acceptance": true,
+  "tested_files_still_identical_at_delivery": 31,
+  "tested_files": {
+    "examples/LEEME.md": {
+      "sha256": "a35a7d484caea075b9f75daf1c483414266362dce664f89d07185d7ce032021e",
+      "bytes": 1521
+    },
+    "examples/calculo/decision.json": {
+      "sha256": "3807ba9a04ef942b8b19c29c2f4b95239084d2f728ab305ada6b8d923edc021c",
+      "bytes": 32
+    },
+    "examples/calculo/plan.json": {
+      "sha256": "437d47b025b2a853fdadb9dc55a41d5b3a00267abf40da4014846accb1bcd861",
+      "bytes": 3615
+    },
+    "examples/datos/data.csv": {
+      "sha256": "5c19e92a12c5b799028318cb9222ee4e2cfdd4159031036532093ebcc88cc29e",
+      "bytes": 73
+    },
+    "examples/datos/decision.json": {
+      "sha256": "3807ba9a04ef942b8b19c29c2f4b95239084d2f728ab305ada6b8d923edc021c",
+      "bytes": 32
+    },
+    "examples/datos/plan.json": {
+      "sha256": "611e264bbffa8f4f5bf03994edb6d3dd3fe34d5d2626cd9b27fdd842e41b699e",
+      "bytes": 3171
+    },
+    "examples/datos_sin_mejora/data.csv": {
+      "sha256": "7a30e7aa52acedaadb9bd06b2a0245240ae1dde4bc04b30eef8715a61430ec5e",
+      "bytes": 73
+    },
+    "examples/datos_sin_mejora/decision.json": {
+      "sha256": "73dbe4d86a4a5baf6c483c7c052c1e6fe0679fa9ddc26b755e86d6eb08f03498",
+      "bytes": 277
+    },
+    "examples/datos_sin_mejora/plan.json": {
+      "sha256": "f7d296b377026a5635d8c4bd5c8cbbec251cc8808474ad8ba327713b9968fc5e",
+      "bytes": 3137
+    },
+    "examples/documentos/decision.json": {
+      "sha256": "3807ba9a04ef942b8b19c29c2f4b95239084d2f728ab305ada6b8d923edc021c",
+      "bytes": 32
+    },
+    "examples/documentos/nota.txt": {
+      "sha256": "54376c3e08330026e1b0c55853c72f1f7289216dd8f5a7a93656c9ab5da0598d",
+      "bytes": 186
+    },
+    "examples/documentos/plan.json": {
+      "sha256": "0328abef0ef972eaee2f0f67ccd4e6b72b676afc9f601b80ec077f81928992a8",
+      "bytes": 3683
+    },
+    "examples/documentos/revision.json": {
+      "sha256": "f54f99b80dc500c55ff0982dd5f2eaae961f6327c51ee6d05b326e494ff7c8d9",
+      "bytes": 462
+    },
+    "examples/revision_declarada/decision.json": {
+      "sha256": "33a7a81ca7eb31ba77355b8ddbb61070881477aaccb6733b5aa195a8485aaa79",
+      "bytes": 60
+    },
+    "examples/revision_declarada/draft.json": {
+      "sha256": "66d86a9ee9105731e77dab43d1b68b91fceee499c77a3f53c37b687868055076",
+      "bytes": 1022
+    },
+    "examples/revision_declarada/plan.json": {
+      "sha256": "41e806016519268b694b87a32a6acb71139dd6384b9c9240f72abac4befa7c15",
+      "bytes": 3651
+    },
+    "examples/revision_declarada/review.template.json": {
+      "sha256": "e64ad2398231ccf66731986c53f8059cc7e392e3d3dabaeb7a012731b5b121e8",
+      "bytes": 957
+    },
+    "examples/techo/data.csv": {
+      "sha256": "9e811b730fb6a3bb2839a82ca73b37837079e43b386897c1eb6c41819a1b589e",
+      "bytes": 77
+    },
+    "examples/techo/decision.json": {
+      "sha256": "3807ba9a04ef942b8b19c29c2f4b95239084d2f728ab305ada6b8d923edc021c",
+      "bytes": 32
+    },
+    "examples/techo/plan.json": {
+      "sha256": "ad04786f2b505356957f69fcce6932a7aa229d1a27087152ab87aa9be5738e8d",
+      "bytes": 3297
+    },
+    "pse/__init__.py": {
+      "sha256": "f52578d32ebe567d86dfd34267a061af0b9538253c617911267b7179f8063b3e",
+      "bytes": 100
+    },
+    "pse/__main__.py": {
+      "sha256": "9c8661244022cbe72031d61d851e324325ebfee58ad44883a4e661df88e583eb",
+      "bytes": 3186
+    },
+    "pse/adapters.py": {
+      "sha256": "6778166a285470bf2984fbf3fe10aba6a605020cf471e167436fbd427d47ad03",
+      "bytes": 21164
+    },
+    "pse/claims.py": {
+      "sha256": "7716ff8426090ce9523897432e5a3ef755e9e9765594c5712b1295ec218b768b",
+      "bytes": 22419
+    },
+    "pse/engine.py": {
+      "sha256": "4c0a1d6d807ce332bdb4b5cdf5c24fd23183cf4d7c205195f75bcfcd660bbefd",
+      "bytes": 43953
+    },
+    "scripts/run_examples.py": {
+      "sha256": "83af9cb328e20625226d9ab8b9d4aa50b71850ed0f04fbc19a1fc206389512ea",
+      "bytes": 3529
+    },
+    "tests/test_adapters.py": {
+      "sha256": "373654cae9b4ddda5678ef0fd6b20b395c5a566485f5351932ed4fff50ae0bd4",
+      "bytes": 15446
+    },
+    "tests/test_adversarial.py": {
+      "sha256": "827c74aeeed25f56fe1c021578c9922a9ddeb7aec3d2b6740c4ae162e056928b",
+      "bytes": 16185
+    },
+    "tests/test_claims.py": {
+      "sha256": "5e9137c26c106dfc680dfb11f994a33e035b437e91df7290408d00e3a3bc82b8",
+      "bytes": 19100
+    },
+    "tests/test_engine.py": {
+      "sha256": "49cafe55eacf9223bd64495a6834635d86bd5793ecd3c95fd582f4db2926fe83",
+      "bytes": 32858
+    },
+    "tests/test_release_v2.py": {
+      "sha256": "6ea44796ff719ae533259df32ed3547e6e2a48b1a68e0ebfc846d943f9778bf4",
+      "bytes": 25416
+    }
+  },
+  "historical_v1_public_files_unchanged": 40,
+  "prior_integral_trial_evidence_files_unchanged": 12,
+  "first_round": "174/175 passed; corrected one QA assertion from string to exact numeric representation; adverse log preserved locally.",
+  "second_round": "175/175 passed in isolated copy, six verified examples and all 12 CLI operations.",
+  "remaining_demonstrated_limit": "A dishonest declared reviewer can approve a false claim; closure remains CLOSED_REVIEWED_DECLARED, not a computed fact.",
+  "publication_performed": false
+}
